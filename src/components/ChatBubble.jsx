@@ -1,9 +1,5 @@
-// ─────────────────────────────────────────────
+
 // Chat Bubble
-// src/components/ChatBubble.jsx
-// ─────────────────────────────────────────────
-// Renders a single user or AI message bubble.
-// data-user attribute drives CSS branching.
 
 import styles from "../styles/components/chat-bubble.module.css";
 

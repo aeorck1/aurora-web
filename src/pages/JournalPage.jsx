@@ -1,13 +1,11 @@
-// ─────────────────────────────────────────────
+
 // Journal Page
-// src/pages/JournalPage.jsx
-// ─────────────────────────────────────────────
 import { useState } from "react";
 import styles from "../styles/pages/journal.module.css";
 import { useAurora } from "../store/AuroraContext";
 import { MOOD_LIST } from "../constants/moods";
-import BgBlobs     from "../components/BgBlobs";
-import MoodTag     from "../components/MoodTag";
+import BgBlobs from "../components/BgBlobs";
+import MoodTag from "../components/MoodTag";
 import JournalCard from "../components/JournalCard";
 
 export default function JournalPage() {
@@ -16,11 +14,11 @@ export default function JournalPage() {
     deleteJournalEntry, clearAllData, exportJournal,
   } = useAurora();
 
-  const [view,         setView]         = useState("list");
+  const [view, setView] = useState("list");
   const [editingEntry, setEditingEntry] = useState(null);
-  const [content,      setContent]      = useState("");
+  const [content, setContent] = useState("");
   const [selectedMood, setSelectedMood] = useState("");
-  const [searchQuery,  setSearchQuery]  = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
   const [showSettings, setShowSettings] = useState(false);
 
   const filteredJournal = journal.filter(

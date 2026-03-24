@@ -1,11 +1,5 @@
-// ─────────────────────────────────────────────
-// Mood Tag
-// src/components/MoodTag.jsx
-// ─────────────────────────────────────────────
-// Pill-shaped mood selector button.
-// Static layout from CSS module; dynamic
-// border/bg/color remain inline (per-mood values).
 
+// Mood Tag
 import styles from "../styles/components/mood-tag.module.css";
 import { MOOD_CONFIG } from "../constants/moods";
 

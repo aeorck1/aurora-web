@@ -1,7 +1,5 @@
-// ─────────────────────────────────────────────
+
 // useSpeechToText
-// src/hooks/useSpeechToText.js
-// ─────────────────────────────────────────────
 // Wraps the Web Speech API (SpeechRecognition).
 // Returns: { isSupported, isListening, transcript,
 //            startListening, stopListening,

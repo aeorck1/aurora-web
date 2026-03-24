@@ -1,7 +1,6 @@
-// ─────────────────────────────────────────────
+
 // Export Journal Utility
-// src/utils/exportJournal.js
-// ─────────────────────────────────────────────
+
 // Generates a formatted .txt file from the
 // user's journal entries and triggers a download.
 

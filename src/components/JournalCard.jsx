@@ -1,10 +1,6 @@
-// ─────────────────────────────────────────────
+
 // Journal Card
 // src/components/JournalCard.jsx
-// ─────────────────────────────────────────────
-// Journal entry card with date, mood badge,
-// content preview, and edit/delete dropdown.
-// Hover behaviour handled by CSS :hover.
 
 import { useState } from "react";
 import styles from "../styles/components/journal-card.module.css";
@@ -12,9 +8,9 @@ import { MOOD_CONFIG } from "../constants/moods";
 
 export default function JournalCard({ entry, onEdit, onDelete }) {
   const [showOptions, setShowOptions] = useState(false);
-  const date      = new Date(entry.createdAt);
+  const date = new Date(entry.createdAt);
   const moodColor = MOOD_CONFIG[entry.mood]?.color;
-  const moodBg    = moodColor ? `${moodColor}18` : undefined;
+  const moodBg = moodColor ? `${moodColor}18` : undefined;
 
   return (
     <div className={styles.card}>

@@ -1,15 +1,13 @@
-// ─────────────────────────────────────────────
+
 // Aurora API Service Layer
 // src/services/api.js
-// ─────────────────────────────────────────────
+
 // All backend communication goes through this
 // module. Errors are handled gracefully so the
 // app degrades to local-only mode if the API
 // is unavailable.
 
 const API_BASE = "https://aiurora-backend-production.up.railway.app";
-
-// ── Helpers ─────────────────────────────────
 
 const defaultHeaders = { "Content-Type": "application/json" };
 
@@ -25,7 +23,6 @@ async function request(path, options = {}) {
   return res.json();
 }
 
-// ── User ────────────────────────────────────
 
 /**
  * Create a new user account.

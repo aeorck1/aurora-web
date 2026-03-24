@@ -1,16 +1,12 @@
-// ─────────────────────────────────────────────
+
 // NavBar
-// src/layouts/NavBar.jsx
-// ─────────────────────────────────────────────
-// Fixed top nav with logo, page links, and
-// theme toggle. Active state via data-active.
 
 import styles from "../styles/components/nav-bar.module.css";
 import { useAurora } from "../store/AuroraContext";
 
 const NAV_ITEMS = [
-  { id: "landing", label: "Home",    icon: "✦" },
-  { id: "chat",    label: "Chat",    icon: "◎" },
+  { id: "landing", label: "Home", icon: "✦" },
+  { id: "chat", label: "Chat", icon: "◎" },
   { id: "journal", label: "Journal", icon: "◈" },
 ];
 

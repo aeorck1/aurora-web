@@ -1,15 +1,9 @@
-// ─────────────────────────────────────────────
-// ChatInput (was InputBox)
-// src/components/ChatInput.jsx
-// ─────────────────────────────────────────────
-// Auto-resizing text input + send button (existing)
-// + microphone button with voice-to-text (new).
-//
-// Voice flow:
-//   1. Click mic → SpeechRecognition starts (if supported) + MediaRecorder starts
-//   2. Click mic again → both stop; transcript populates textarea
-//   3. If SpeechRecognition not supported → audioBlob passed to onAudioReady()
-//   4. Permission denied → mic button disabled gracefully
+/* Voice flow:
+  1. Click mic → SpeechRecognition starts (if supported) + MediaRecorder starts
+  2. Click mic again → both stop; transcript populates textarea
+  3. If SpeechRecognition not supported → audioBlob passed to onAudioReady()
+   4. Permission denied → mic button disabled gracefully 
+   */
 
 import { useState, useEffect, useCallback } from "react";
 import styles from "../styles/components/chat-input.module.css";
@@ -26,7 +20,7 @@ export default function ChatInput({
 }) {
   const [micBlocked, setMicBlocked] = useState(false);
 
-  // ── Voice hooks ──────────────────────────
+  
   const {
     isSupported: speechSupported,
     isListening, transcript,
@@ -49,7 +43,7 @@ export default function ChatInput({
     }
   }, [audioBlob, speechSupported, onAudioReady]);
 
-  // ── Keyboard shortcut ────────────────────
+
   const handleKeyDown = (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
@@ -57,7 +51,7 @@ export default function ChatInput({
     }
   };
 
-  // ── Mic toggle ───────────────────────────
+  
   const handleMicToggle = useCallback(async () => {
     if (isRecording || isListening) {
       // Stop everything
@@ -102,7 +96,7 @@ export default function ChatInput({
         }}
       />
 
-      {/* ── Mic button ── */}
+      
       <button
         className={styles.micBtn}
         onClick={handleMicToggle}
@@ -130,7 +124,7 @@ export default function ChatInput({
         )}
       </button>
 
-      {/* ── Send button ── */}
+      
       <button
         className={styles.sendBtn}
         onClick={onSend}

@@ -1,10 +1,6 @@
-// ─────────────────────────────────────────────
+
 // Aurora Context (Global State)
-// src/store/AuroraContext.jsx
-// ─────────────────────────────────────────────
-// Provides app-wide state via React Context.
-// Wrap your root with <AuroraProvider> and
-// consume with the useAurora() hook anywhere.
+
 
 import { createContext, useContext, useState, useEffect, useCallback } from "react";
 import { Storage, StorageKeys } from "../utils/storage";
@@ -17,10 +13,10 @@ export const AuroraContext = createContext(null);
 export const useAurora = () => useContext(AuroraContext);
 
 export function AuroraProvider({ children }) {
-  const [theme, setTheme]             = useState(() => Storage.get(StorageKeys.theme) || "light");
-  const [userId, setUserId]           = useState(() => Storage.get(StorageKeys.userId));
-  const [sessionId, setSessionId]     = useState(() => Storage.get(StorageKeys.sessionId));
-  const [journal, setJournal]         = useState(() => Storage.get(StorageKeys.journal) || []);
+  const [theme, setTheme] = useState(() => Storage.get(StorageKeys.theme) || "light");
+  const [userId, setUserId] = useState(() => Storage.get(StorageKeys.userId));
+  const [sessionId, setSessionId] = useState(() => Storage.get(StorageKeys.sessionId));
+  const [journal, setJournal] = useState(() => Storage.get(StorageKeys.journal) || []);
   const [isOnboarded, setIsOnboarded] = useState(() => !!Storage.get(StorageKeys.onboarded));
   const [currentPage, setCurrentPage] = useState("landing");
 

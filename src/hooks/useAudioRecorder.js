@@ -1,8 +1,6 @@
-// ─────────────────────────────────────────────
+
 // useAudioRecorder
-// src/hooks/useAudioRecorder.js
-// ─────────────────────────────────────────────
-// Records audio via MediaRecorder API.
+// // Records audio via MediaRecorder API.
 // Returns: { isRecording, startRecording,
 //            stopRecording, audioBlob }
 

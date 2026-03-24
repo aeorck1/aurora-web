@@ -1,8 +1,6 @@
-// ─────────────────────────────────────────────
+
 // Mood Definitions
-// src/constants/moods.js
-// ─────────────────────────────────────────────
-// Single source of truth for mood labels, icons,
+// // Single source of truth for mood labels, icons,
 // and colours. Used by MoodTag and JournalCard.
 
 export const MOOD_LIST = ["happy", "calm", "sad", "anxious", "grateful", "tired"];

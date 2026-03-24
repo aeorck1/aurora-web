@@ -1,15 +1,13 @@
-// ─────────────────────────────────────────────
+
 // Chat Page
-// src/pages/ChatPage.jsx
-// ─────────────────────────────────────────────
 import { useState, useEffect, useRef, useCallback } from "react";
 import styles from "../styles/pages/chat.module.css";
 import { useAurora } from "../store/AuroraContext";
 import { Storage, StorageKeys } from "../utils/storage";
 import { getChatHistory, sendMessage, sendAudioMessage } from "../services/api";
-import BgBlobs    from "../components/BgBlobs";
+import BgBlobs from "../components/BgBlobs";
 import ChatBubble from "../components/ChatBubble";
-import ChatInput  from "../components/ChatInput";
+import ChatInput from "../components/ChatInput";
 
 const WELCOME_MESSAGE = {
   id: "welcome",
@@ -28,13 +26,13 @@ const CONVERSATION_STARTERS = [
 export default function ChatPage() {
   const { userId, sessionId, initUser } = useAurora();
 
-  const [messages,         setMessages]         = useState([]);
-  const [input,            setInput]            = useState("");
-  const [isLoading,        setIsLoading]        = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [isLoadingHistory, setIsLoadingHistory] = useState(true);
-  const [error,            setError]            = useState(null);
+  const [error, setError] = useState(null);
 
-  const messagesEndRef   = useRef(null);
+  const messagesEndRef = useRef(null);
   const isInitializedRef = useRef(false);
 
   const resolveUser = useCallback(async () => {
@@ -55,12 +53,12 @@ export default function ChatPage() {
 
     (async () => {
       try {
-        const uid     = await resolveUser();
+        const uid = await resolveUser();
         const history = await getChatHistory(uid);
         if (history && history.length > 0) {
           setMessages(history.map((m) => ({
-            id:      m.id || Date.now() + Math.random(),
-            role:    m.role,
+            id: m.id || Date.now() + Math.random(),
+            role: m.role,
             content: m.content || m.message,
           })));
         } else {
@@ -82,8 +80,8 @@ export default function ChatPage() {
     const sid = sessionId || Storage.get(StorageKeys.sessionId);
 
     const userMsg = {
-      id:      `u_${Date.now()}`,
-      role:    "user",
+      id: `u_${Date.now()}`,
+      role: "user",
       content: text || "🎤 Voice message",
     };
     setMessages((prev) => [...prev, userMsg]);
@@ -101,17 +99,17 @@ export default function ChatPage() {
 
       setMessages((prev) =>
         prev.filter((m) => m.id !== typingId).concat({
-          id:      `a_${Date.now()}`,
-          role:    "assistant",
+          id: `a_${Date.now()}`,
+          role: "assistant",
           content: response.message || response.reply || response.response ||
-                   "I hear you. Can you tell me more about what you're experiencing?",
+            "I hear you. Can you tell me more about what you're experiencing?",
         })
       );
     } catch {
       setMessages((prev) => prev.filter((m) => m.id !== typingId));
       setMessages((prev) => [...prev, {
-        id:      `a_${Date.now()}`,
-        role:    "assistant",
+        id: `a_${Date.now()}`,
+        role: "assistant",
         content: "There is a network error",
       }]);
     } finally {
@@ -119,7 +117,7 @@ export default function ChatPage() {
     }
   }, [isLoading, resolveUser, sessionId]);
 
-  const handleSend       = () => dispatchMessage({ text: input });
+  const handleSend = () => dispatchMessage({ text: input });
   const handleAudioReady = (blob) => dispatchMessage({ audioBlob: blob });
 
   return (

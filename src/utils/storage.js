@@ -1,7 +1,5 @@
-// ─────────────────────────────────────────────
+
 // Storage Abstraction (Privacy Layer)
-// src/utils/storage.js
-// ─────────────────────────────────────────────
 // Wraps localStorage with JSON serialisation,
 // error swallowing, and scoped key names.
 // Only Aurora's own keys are cleared on reset.
@@ -35,7 +33,6 @@ export const Storage = {
       localStorage.setItem(k, JSON.stringify(value));
       return true;
     } catch {
-      console.warn("[Aurora] Storage write failed for key:", userSession);
       return false;
     }
   },

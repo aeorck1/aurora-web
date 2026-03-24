@@ -1,9 +1,7 @@
-// ─────────────────────────────────────────────
+
 // Input Box
 // src/components/InputBox.jsx
-// ─────────────────────────────────────────────
-// Auto-resizing textarea with a send button.
-// Submits on Enter (without Shift) or button click.
+
 
 export default function InputBox({ value, onChange, onSend, placeholder, disabled }) {
   const handleKeyDown = (e) => {
@@ -38,9 +36,9 @@ export default function InputBox({ value, onChange, onSend, placeholder, disable
           maxHeight: 120, overflowY: "auto",
           fontFamily: "var(--font-body)", lineHeight: 1.5,
         }}
-        onFocus={(e)  => (e.target.style.borderColor = "var(--border-focus)")}
-        onBlur={(e)   => (e.target.style.borderColor = "var(--border)")}
-        onInput={(e)  => {
+        onFocus={(e) => (e.target.style.borderColor = "var(--border-focus)")}
+        onBlur={(e) => (e.target.style.borderColor = "var(--border)")}
+        onInput={(e) => {
           e.target.style.height = "auto";
           e.target.style.height = Math.min(e.target.scrollHeight, 120) + "px";
         }}
@@ -52,7 +50,7 @@ export default function InputBox({ value, onChange, onSend, placeholder, disable
         style={{
           width: 44, height: 44, borderRadius: "50%", border: "none",
           background: value.trim() && !disabled ? "var(--accent)" : "var(--bg-tertiary)",
-          color:      value.trim() && !disabled ? "white"        : "var(--text-muted)",
+          color: value.trim() && !disabled ? "white" : "var(--text-muted)",
           fontSize: 18,
           display: "flex", alignItems: "center", justifyContent: "center",
           transition: "var(--transition)", flexShrink: 0,
