@@ -7,7 +7,7 @@
 // app degrades to local-only mode if the API
 // is unavailable.
 
-const API_BASE = "https://aiurora-backend-production.up.railway.app";
+const API_BASE = "https://aura-app-backend.up.railway.app/";
 
 const defaultHeaders = { "Content-Type": "application/json" };
 

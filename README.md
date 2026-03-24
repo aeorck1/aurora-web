@@ -1,6 +1,6 @@
 # Aura 🌸
 
-# Link to the live site [https://Aura-web-livid.vercel.app]
+# Link to the live site [https://aura-web-livid.vercel.app]
 # Link to the backend repository [https://github.com/aeorck1/AIurora-backend]
 
 
@@ -63,9 +63,8 @@ All backend calls are centralised in `src/services/api.js`.
 | `POST` | `/api/users` | Create a new anonymous user session |
 | `GET` | `/api/chat/:user_id` | Load a user's full chat history |
 | `POST` | `/api/chat` | Send a text message and receive Aura's response |
-| `POST` | `/api/chat/audio` | Upload a voice recording (`multipart/form-data`: `user_id`, `audio_file`) |
 
-**Backend:** `https://aiurora-backend-production.up.railway.app`
+**Backend:** `https://aura-app-backend.up.railway.app/`
 
 ---
 
