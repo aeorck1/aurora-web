@@ -1,5 +1,9 @@
 # Aurora 🌸
 
+# Link to the live site [https://aurora-web-livid.vercel.app]
+# Link to the backend repository [https://github.com/aeorck1/AIurora-backend]
+
+
 > *A calmer mind begins here.*
 
 Aurora is a private, AI-powered mental wellness companion. It gives users a safe, judgment-free space to talk through their feelings, reflect on their day, and track their emotional wellbeing — all from the browser.
