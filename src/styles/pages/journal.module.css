@@ -1,0 +1,317 @@
+/* journal.module.css — Journal page layout */
+
+/* ── Page shell ────────────────────────── */
+.page {
+  min-height: 100vh;
+  padding-top: 64px;
+  position: relative;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+/* ── Header ────────────────────────────── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.headerTitle {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.headerMeta {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.headerActions {
+  display: flex;
+  gap: 8px;
+}
+
+.exportBtn {
+  padding: 9px 18px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.exportBtn:hover {
+  border-color: var(--border-focus);
+}
+
+.newEntryBtn {
+  padding: 9px 20px;
+  border-radius: 99px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.newEntryBtn:hover {
+  opacity: 0.9;
+}
+
+.settingsBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.settingsBtn:hover {
+  border-color: var(--border-focus);
+}
+
+/* ── Settings panel ────────────────────── */
+.settingsPanel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  animation: fadeUp 0.3s ease;
+}
+
+.settingsTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.settingsDesc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.settingsActions {
+  display: flex;
+  gap: 10px;
+}
+
+.settingsExportBtn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.settingsDeleteBtn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #fca5a5;
+  background: transparent;
+  color: #ef4444;
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* ── Write / Edit panel ────────────────── */
+.editorPanel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 28px;
+  overflow: hidden;
+  animation: fadeUp 0.35s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.editorBody {
+  padding: 20px 24px 0;
+}
+
+.editorDate {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.editorTextarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-family: var(--font-display);
+  line-height: 1.9;
+  resize: none;
+  min-height: 220px;
+  padding: 16px 0;
+}
+
+.editorFooter {
+  border-top: 1px solid var(--border);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.moodRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.moodLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-right: 4px;
+}
+
+.editorBtns {
+  display: flex;
+  gap: 8px;
+}
+
+.cancelBtn {
+  padding: 8px 18px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.saveBtn {
+  padding: 8px 22px;
+  border-radius: 99px;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: pointer;
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+}
+
+.saveBtn[data-active="true"] {
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+/* ── Search bar ────────────────────────── */
+.searchWrap {
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 11px 18px;
+  border-radius: 99px;
+  border: 1.5px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 14px;
+  outline: none;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.searchInput:focus {
+  border-color: var(--border-focus);
+}
+
+/* ── Empty state ───────────────────────── */
+.emptyState {
+  text-align: center;
+  padding: 80px 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  display: block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.emptyTitle {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.emptyDesc {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 340px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+}
+
+.emptyBtn {
+  padding: 12px 28px;
+  border-radius: 99px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.emptyBtn:hover {
+  opacity: 0.9;
+}
+
+/* ── Entry grid ────────────────────────── */
+.entryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.entryItem {
+  /* animationDelay is set inline per-item */
+}

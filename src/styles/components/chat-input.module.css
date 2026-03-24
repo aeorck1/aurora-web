@@ -1,0 +1,136 @@
+/* chat-input.module.css — Chat input bar with text + voice */
+
+.inputBar {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+/* ── Textarea ──────────────────────────── */
+.textarea {
+  flex: 1;
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 10px 16px;
+  background: var(--bg-input);
+  color: var(--text-primary);
+  font-size: 15px;
+  font-family: var(--font-body);
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+  transition: var(--transition);
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.textarea:focus {
+  border-color: var(--border-focus);
+}
+
+.textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Action buttons ────────────────────── */
+.sendBtn,
+.micBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* Send button – active only when there's text */
+.sendBtn {
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  transform: scale(0.9);
+}
+
+.sendBtn[data-active="true"] {
+  background: var(--accent);
+  color: white;
+  transform: scale(1);
+}
+
+.sendBtn:disabled {
+  cursor: default;
+}
+
+/* ── Mic button ────────────────────────── */
+.micBtn {
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  position: relative;
+  font-size: 16px;
+}
+
+.micBtn:hover:not(:disabled) {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* Recording state */
+.micBtn[data-recording="true"] {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+/* Pulse ring when recording */
+.micBtn[data-recording="true"]::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #ef4444;
+  animation: mic-pulse 1.2s ease-in-out infinite;
+}
+
+/* Disabled — browser doesn't support speech */
+.micBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Waveform bars shown while recording */
+.waveform {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  height: 16px;
+}
+
+.bar {
+  width: 3px;
+  border-radius: 99px;
+  background: #ef4444;
+}
+
+.bar:nth-child(1) { animation: wave-bar 0.9s ease-in-out infinite 0s;    height: 6px; }
+.bar:nth-child(2) { animation: wave-bar 0.9s ease-in-out infinite 0.15s; height: 10px; }
+.bar:nth-child(3) { animation: wave-bar 0.9s ease-in-out infinite 0.3s;  height: 14px; }
+.bar:nth-child(4) { animation: wave-bar 0.9s ease-in-out infinite 0.15s; height: 10px; }
+.bar:nth-child(5) { animation: wave-bar 0.9s ease-in-out infinite 0s;    height: 6px; }
+
+@keyframes mic-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.12); }
+}
+
+@keyframes wave-bar {
+  0%, 100% { transform: scaleY(0.5); opacity: 0.6; }
+  50%       { transform: scaleY(1.2); opacity: 1; }
+}

@@ -1,0 +1,120 @@
+/* journal-card.module.css — Journal entry card */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  transition: var(--transition);
+  position: relative;
+  animation: fadeUp 0.4s ease both;
+}
+
+.card:hover {
+  border-color: var(--border-focus);
+}
+
+/* ── Header row ────────────────────────── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.dateLabel {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.timeLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ── Right side (mood + menu) ──────────── */
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.moodBadge {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-weight: 500;
+  /* background and color are inline (dynamic per-mood) */
+}
+
+/* ── Options button ────────────────────── */
+.optionsWrap {
+  position: relative;
+}
+
+.optionsBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.optionsBtn:hover {
+  border-color: var(--border-focus);
+  color: var(--text-secondary);
+}
+
+/* ── Dropdown ──────────────────────────── */
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 34px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  z-index: 10;
+  min-width: 120px;
+}
+
+.dropdownItem {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.dropdownItem:hover {
+  background: var(--bg-secondary);
+}
+
+.dropdownItem.edit  { color: var(--text-primary); }
+.dropdownItem.delete { color: #ef4444; }
+
+/* ── Content preview ───────────────────── */
+.excerpt {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

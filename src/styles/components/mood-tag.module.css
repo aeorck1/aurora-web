@@ -1,0 +1,18 @@
+/* mood-tag.module.css — Pill-shaped mood selector button */
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: pointer;
+  /* border, background, and color are set inline (dynamic per-mood values) */
+}
+
+.emoji {
+  font-size: 12px;
+}
