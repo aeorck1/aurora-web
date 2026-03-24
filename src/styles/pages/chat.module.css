@@ -1,6 +1,6 @@
 /* chat.module.css — Chat page layout */
 
-/* ── Page shell ────────────────────────── */
+/*  Page shell  */
 .page {
   min-height: 100vh;
   padding-top: 64px;
@@ -21,7 +21,7 @@
   z-index: 1;
 }
 
-/* ── Session status pill ───────────────── */
+/*  Session status pill  */
 .statusWrap {
   text-align: center;
   margin-bottom: 24px;
@@ -51,7 +51,7 @@
   font-weight: 500;
 }
 
-/* ── Chat window ───────────────────────── */
+/*  Chat window ─ */
 .chatWindow {
   flex: 1;
   background: var(--bg-card);
@@ -69,7 +69,7 @@
   padding: 24px 20px;
 }
 
-/* ── Loading spinner ───────────────────── */
+/*  Loading spinner  */
 .loadingWrap {
   display: flex;
   justify-content: center;
@@ -88,11 +88,19 @@
   background: var(--accent);
 }
 
-.loadingDot:nth-child(1) { animation: pulse 1.2s ease-in-out infinite 0s; }
-.loadingDot:nth-child(2) { animation: pulse 1.2s ease-in-out infinite 0.2s; }
-.loadingDot:nth-child(3) { animation: pulse 1.2s ease-in-out infinite 0.4s; }
+.loadingDot:nth-child(1) {
+  animation: pulse 1.2s ease-in-out infinite 0s;
+}
 
-/* ── Conversation starters ─────────────── */
+.loadingDot:nth-child(2) {
+  animation: pulse 1.2s ease-in-out infinite 0.2s;
+}
+
+.loadingDot:nth-child(3) {
+  animation: pulse 1.2s ease-in-out infinite 0.4s;
+}
+
+/*  Conversation starters  */
 .starters {
   display: flex;
   flex-wrap: wrap;
@@ -117,7 +125,7 @@
   color: var(--text-primary);
 }
 
-/* ── Error banner ──────────────────────── */
+/*  Error banner  */
 .errorBanner {
   padding: 8px 20px;
   font-size: 13px;
@@ -126,7 +134,7 @@
   border-top: 1px solid #fecdd3;
 }
 
-/* ── Footer note ───────────────────────── */
+/*  Footer note ─ */
 .footerNote {
   text-align: center;
   font-size: 11px;

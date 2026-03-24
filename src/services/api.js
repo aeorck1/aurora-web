@@ -42,7 +42,7 @@ export async function createUser() {
   }
 }
 
-// ── Chat ────────────────────────────────────
+//  Chat 
 
 /**
  * Fetch a user's full chat history.

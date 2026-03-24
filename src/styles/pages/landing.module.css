@@ -1,6 +1,6 @@
 /* landing.module.css — Landing page layout */
 
-/* ── Page shell ────────────────────────── */
+/*  Page shell  */
 .page {
   min-height: 100vh;
   padding-top: 64px;
@@ -16,7 +16,7 @@
   padding: 0 24px;
 }
 
-/* ── Hero ──────────────────────────────── */
+/*  Hero  */
 .hero {
   text-align: center;
   padding: 100px 0 80px;
@@ -76,7 +76,7 @@
   animation: fadeUp 0.5s 0.2s ease both;
 }
 
-/* ── CTA Buttons ───────────────────────── */
+/*  CTA Buttons ─ */
 .ctaRow {
   display: flex;
   gap: 14px;
@@ -121,7 +121,7 @@
   background: var(--bg-secondary);
 }
 
-/* ── Features Grid ─────────────────────── */
+/*  Features Grid  */
 .featuresGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -167,7 +167,7 @@
   line-height: 1.7;
 }
 
-/* ── Privacy note ──────────────────────── */
+/*  Privacy note  */
 .privacyNote {
   text-align: center;
   padding-bottom: 60px;

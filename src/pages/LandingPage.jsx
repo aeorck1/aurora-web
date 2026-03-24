@@ -25,7 +25,7 @@ export default function LandingPage() {
       <BgBlobs />
 
       <div className={styles.inner}>
-        {/* ── Hero ── */}
+        {/*  Hero  */}
         <div className={styles.hero}>
           <div className={styles.statusPill}>
             <span className={styles.statusDot} />
@@ -52,7 +52,7 @@ export default function LandingPage() {
           </div>
         </div>
 
-        {/* ── Features Grid ── */}
+        {/*  Features Grid  */}
         <div className={styles.featuresGrid}>
           {FEATURES.map((f, i) => (
             <div
@@ -73,7 +73,7 @@ export default function LandingPage() {
           ))}
         </div>
 
-        {/* ── Privacy Note ── */}
+        {/*  Privacy Note  */}
         <div className={styles.privacyNote}>
           <p className={styles.privacyText}>
             <span className={styles.privacyHighlight}>🔒 Privacy first.</span>{" "}

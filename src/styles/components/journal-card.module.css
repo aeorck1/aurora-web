@@ -14,7 +14,7 @@
   border-color: var(--border-focus);
 }
 
-/* ── Header row ────────────────────────── */
+/*  Header row  */
 .header {
   display: flex;
   justify-content: space-between;
@@ -35,7 +35,7 @@
   margin-top: 2px;
 }
 
-/* ── Right side (mood + menu) ──────────── */
+/*  Right side (mood + menu)  */
 .headerRight {
   display: flex;
   align-items: center;
@@ -50,7 +50,7 @@
   /* background and color are inline (dynamic per-mood) */
 }
 
-/* ── Options button ────────────────────── */
+/*  Options button ─ */
 .optionsWrap {
   position: relative;
 }
@@ -75,7 +75,7 @@
   color: var(--text-secondary);
 }
 
-/* ── Dropdown ──────────────────────────── */
+/*  Dropdown ─ */
 .dropdown {
   position: absolute;
   right: 0;
@@ -105,10 +105,15 @@
   background: var(--bg-secondary);
 }
 
-.dropdownItem.edit  { color: var(--text-primary); }
-.dropdownItem.delete { color: #ef4444; }
+.dropdownItem.edit {
+  color: var(--text-primary);
+}
 
-/* ── Content preview ───────────────────── */
+.dropdownItem.delete {
+  color: #ef4444;
+}
+
+/*  Content preview  */
 .excerpt {
   font-size: 14px;
   color: var(--text-secondary);

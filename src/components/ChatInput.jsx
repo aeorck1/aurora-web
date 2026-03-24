@@ -7,7 +7,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import styles from "../styles/components/chat-input.module.css";
-import { useSpeechToText }  from "../hooks/useSpeechToText";
+import { useSpeechToText } from "../hooks/useSpeechToText";
 import { useAudioRecorder } from "../hooks/useAudioRecorder";
 
 export default function ChatInput({
@@ -20,7 +20,7 @@ export default function ChatInput({
 }) {
   const [micBlocked, setMicBlocked] = useState(false);
 
-  
+
   const {
     isSupported: speechSupported,
     isListening, transcript,
@@ -51,7 +51,7 @@ export default function ChatInput({
     }
   };
 
-  
+
   const handleMicToggle = useCallback(async () => {
     if (isRecording || isListening) {
       // Stop everything
@@ -76,12 +76,12 @@ export default function ChatInput({
     resetTranscript, speechSupported,
   ]);
 
-  const isActive   = isRecording || isListening;
-  const hasText    = value.trim().length > 0;
+  const isActive = isRecording || isListening;
+  const hasText = value.trim().length > 0;
 
   return (
     <div className={styles.inputBar}>
-      {/* ── Textarea ── */}
+      {/*  Textarea  */}
       <textarea
         className={styles.textarea}
         value={value}
@@ -96,17 +96,17 @@ export default function ChatInput({
         }}
       />
 
-      
+
       <button
         className={styles.micBtn}
         onClick={handleMicToggle}
         disabled={disabled || micBlocked}
         data-recording={String(isActive)}
         title={
-          micBlocked         ? "Microphone access denied" :
-          !speechSupported   ? "Record audio" :
-          isActive           ? "Stop recording" :
-                               "Voice input"
+          micBlocked ? "Microphone access denied" :
+            !speechSupported ? "Record audio" :
+              isActive ? "Stop recording" :
+                "Voice input"
         }
         aria-label={isActive ? "Stop recording" : "Start voice input"}
       >
@@ -124,7 +124,7 @@ export default function ChatInput({
         )}
       </button>
 
-      
+
       <button
         className={styles.sendBtn}
         onClick={onSend}

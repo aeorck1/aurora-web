@@ -72,7 +72,7 @@ export default function ChatPage() {
     })();
   }, [resolveUser]);
 
-  // ── Generic message dispatcher ────────────
+  //  Generic message dispatcher 
   const dispatchMessage = useCallback(async ({ text, audioBlob }) => {
     if ((!text && !audioBlob) || isLoading) return;
 

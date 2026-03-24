@@ -14,7 +14,7 @@ export default function JournalCard({ entry, onEdit, onDelete }) {
 
   return (
     <div className={styles.card}>
-      {/* ── Header ── */}
+      {/*  Header  */}
       <div className={styles.header}>
         <div>
           <div className={styles.dateLabel}>
@@ -65,7 +65,7 @@ export default function JournalCard({ entry, onEdit, onDelete }) {
         </div>
       </div>
 
-      {/* ── Content preview ── */}
+      {/*  Content preview  */}
       <p className={styles.excerpt}>{entry.content}</p>
     </div>
   );

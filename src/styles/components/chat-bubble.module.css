@@ -7,10 +7,15 @@
 }
 
 /* AI messages align left, user messages align right */
-.wrapper[data-user="false"] { justify-content: flex-start; }
-.wrapper[data-user="true"]  { justify-content: flex-end; }
+.wrapper[data-user="false"] {
+  justify-content: flex-start;
+}
 
-/* ── AI Avatar ─────────────────────────── */
+.wrapper[data-user="true"] {
+  justify-content: flex-end;
+}
+
+/*  AI Avatar  */
 .avatar {
   width: 32px;
   height: 32px;
@@ -26,7 +31,7 @@
   align-self: flex-end;
 }
 
-/* ── Bubble ────────────────────────────── */
+/*  Bubble  */
 .bubble {
   max-width: 72%;
   padding: 12px 16px;
@@ -48,7 +53,7 @@
   color: var(--bubble-user-text);
 }
 
-/* ── Typing dots ───────────────────────── */
+/*  Typing dots ─ */
 .typingDots {
   display: flex;
   gap: 5px;
@@ -62,11 +67,19 @@
   background: var(--text-muted);
 }
 
-.dot:nth-child(1) { animation: pulse 1.2s ease-in-out infinite 0s; }
-.dot:nth-child(2) { animation: pulse 1.2s ease-in-out infinite 0.2s; }
-.dot:nth-child(3) { animation: pulse 1.2s ease-in-out infinite 0.4s; }
+.dot:nth-child(1) {
+  animation: pulse 1.2s ease-in-out infinite 0s;
+}
 
-/* ── Content ───────────────────────────── */
+.dot:nth-child(2) {
+  animation: pulse 1.2s ease-in-out infinite 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation: pulse 1.2s ease-in-out infinite 0.4s;
+}
+
+/*  Content  */
 .text {
   white-space: pre-wrap;
   text-align: left;

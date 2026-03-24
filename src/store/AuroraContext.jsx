@@ -28,7 +28,7 @@ export function AuroraProvider({ children }) {
 
   const toggleTheme = () => setTheme((t) => (t === "light" ? "dark" : "light"));
 
-  // ── User Initialisation ───────────────────
+  //  User Initialisation ─
 
   const initUser = useCallback(async () => {
     if (userId) return userId;
@@ -50,7 +50,7 @@ export function AuroraProvider({ children }) {
     }
   }, [initUser]);
 
-  // ── Journal CRUD ─────────────────────────
+  //  Journal CRUD ─
 
   const addJournalEntry = (entry) => {
     const newEntry = {
@@ -85,7 +85,7 @@ export function AuroraProvider({ children }) {
     });
   };
 
-  // ── Data Management ───────────────────────
+  //  Data Management 
 
   const clearAllData = () => {
     Storage.clear();

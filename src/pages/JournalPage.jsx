@@ -67,7 +67,7 @@ export default function JournalPage() {
       <BgBlobs />
 
       <div className={styles.inner}>
-        {/* ── Header ── */}
+        {/*  Header  */}
         <div className={styles.header}>
           <div>
             <h1 className={styles.headerTitle}>My Journal</h1>
@@ -84,7 +84,7 @@ export default function JournalPage() {
           </div>
         </div>
 
-        {/* ── Settings panel ── */}
+        {/*  Settings panel  */}
         {showSettings && (
           <div className={styles.settingsPanel}>
             <h3 className={styles.settingsTitle}>Privacy &amp; Data</h3>
@@ -99,7 +99,7 @@ export default function JournalPage() {
           </div>
         )}
 
-        {/* ── Write / Edit panel ── */}
+        {/*  Write / Edit panel  */}
         {(view === "write" || view === "edit") && (
           <div className={styles.editorPanel}>
             <div className={styles.editorBody}>
@@ -142,7 +142,7 @@ export default function JournalPage() {
           </div>
         )}
 
-        {/* ── Search ── */}
+        {/*  Search  */}
         {view === "list" && journal.length > 0 && (
           <div className={styles.searchWrap}>
             <input
@@ -154,7 +154,7 @@ export default function JournalPage() {
           </div>
         )}
 
-        {/* ── Journal list ── */}
+        {/*  Journal list  */}
         {view === "list" && (
           <>
             {filteredJournal.length === 0 ? (

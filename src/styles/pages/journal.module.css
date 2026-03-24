@@ -1,6 +1,6 @@
 /* journal.module.css — Journal page layout */
 
-/* ── Page shell ────────────────────────── */
+/*  Page shell  */
 .page {
   min-height: 100vh;
   padding-top: 64px;
@@ -15,7 +15,7 @@
   padding: 32px 20px 80px;
 }
 
-/* ── Header ────────────────────────────── */
+/*  Header  */
 .header {
   display: flex;
   justify-content: space-between;
@@ -94,7 +94,7 @@
   border-color: var(--border-focus);
 }
 
-/* ── Settings panel ────────────────────── */
+/*  Settings panel ─ */
 .settingsPanel {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -145,7 +145,7 @@
   transition: var(--transition);
 }
 
-/* ── Write / Edit panel ────────────────── */
+/*  Write / Edit panel  */
 .editorPanel {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -238,7 +238,7 @@
   cursor: pointer;
 }
 
-/* ── Search bar ────────────────────────── */
+/*  Search bar  */
 .searchWrap {
   margin-bottom: 20px;
 }
@@ -260,7 +260,7 @@
   border-color: var(--border-focus);
 }
 
-/* ── Empty state ───────────────────────── */
+/*  Empty state ─ */
 .emptyState {
   text-align: center;
   padding: 80px 20px;
@@ -305,13 +305,9 @@
   opacity: 0.9;
 }
 
-/* ── Entry grid ────────────────────────── */
+/*  Entry grid  */
 .entryGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
-}
-
-.entryItem {
-  /* animationDelay is set inline per-item */
 }

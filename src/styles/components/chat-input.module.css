@@ -10,7 +10,7 @@
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
 
-/* ── Textarea ──────────────────────────── */
+/*  Textarea ─ */
 .textarea {
   flex: 1;
   border: 1.5px solid var(--border);
@@ -37,7 +37,7 @@
   cursor: not-allowed;
 }
 
-/* ── Action buttons ────────────────────── */
+/*  Action buttons ─ */
 .sendBtn,
 .micBtn {
   width: 44px;
@@ -70,7 +70,7 @@
   cursor: default;
 }
 
-/* ── Mic button ────────────────────────── */
+/*  Mic button  */
 .micBtn {
   background: var(--bg-tertiary);
   color: var(--text-muted);
@@ -119,18 +119,55 @@
   background: #ef4444;
 }
 
-.bar:nth-child(1) { animation: wave-bar 0.9s ease-in-out infinite 0s;    height: 6px; }
-.bar:nth-child(2) { animation: wave-bar 0.9s ease-in-out infinite 0.15s; height: 10px; }
-.bar:nth-child(3) { animation: wave-bar 0.9s ease-in-out infinite 0.3s;  height: 14px; }
-.bar:nth-child(4) { animation: wave-bar 0.9s ease-in-out infinite 0.15s; height: 10px; }
-.bar:nth-child(5) { animation: wave-bar 0.9s ease-in-out infinite 0s;    height: 6px; }
+.bar:nth-child(1) {
+  animation: wave-bar 0.9s ease-in-out infinite 0s;
+  height: 6px;
+}
+
+.bar:nth-child(2) {
+  animation: wave-bar 0.9s ease-in-out infinite 0.15s;
+  height: 10px;
+}
+
+.bar:nth-child(3) {
+  animation: wave-bar 0.9s ease-in-out infinite 0.3s;
+  height: 14px;
+}
+
+.bar:nth-child(4) {
+  animation: wave-bar 0.9s ease-in-out infinite 0.15s;
+  height: 10px;
+}
+
+.bar:nth-child(5) {
+  animation: wave-bar 0.9s ease-in-out infinite 0s;
+  height: 6px;
+}
 
 @keyframes mic-pulse {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50%       { opacity: 1;   transform: scale(1.12); }
+
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
 }
 
 @keyframes wave-bar {
-  0%, 100% { transform: scaleY(0.5); opacity: 0.6; }
-  50%       { transform: scaleY(1.2); opacity: 1; }
+
+  0%,
+  100% {
+    transform: scaleY(0.5);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scaleY(1.2);
+    opacity: 1;
+  }
 }

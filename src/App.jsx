@@ -5,7 +5,7 @@ import { LandingPage, ChatPage, JournalPage } from "./pages";
 
 const PAGE_MAP = {
   landing: <LandingPage />,
-  chat:    <ChatPage />,
+  chat: <ChatPage />,
   journal: <JournalPage />,
 };
 
@@ -21,7 +21,7 @@ function AuroraApp() {
   );
 }
 
-// ── Root ────────────────────────────────────
+//  Root 
 export default function Aurora() {
   return (
     <AuroraProvider>
