@@ -17,8 +17,6 @@ Built for the **#RaenestHackathon** by **Godwin Daniel** for **RaenestXDevCareer
 | Feature | Description |
 |---|---|
 | **AI Therapy Chat** | Conversational AI that listens and responds thoughtfully to help users process their emotions |
-| **Voice Input** | Record voice messages; browser-native transcription (Web Speech API) streams text in real time as you speak |
-| **Audio Upload** | Raw audio is sent directly to the backend via `POST /api/chat/audio` for server-side processing |
 | **Private Journal** | Personal journal stored exclusively in `localStorage` — entries never leave the device |
 | **Mood Tracking** | Tag each journal entry with a mood to observe emotional patterns over time |
 | **Session Memory** | Aura maintains context throughout a session for continuity |
