@@ -187,7 +187,7 @@ export default function ChatPage() {
           />
         </div>
 
-        <p className={styles.footerNote}>🔒 This conversation is private to your session</p>
+
       </div>
     </div>
   );

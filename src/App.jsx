@@ -1,6 +1,8 @@
 import { AuroraProvider, useAurora } from "./store/AuroraContext";
 import NavBar from "./layouts/NavBar";
+import SiteFooter from "./layouts/SiteFooter";
 import { LandingPage, ChatPage, JournalPage } from "./pages";
+
 
 
 const PAGE_MAP = {
@@ -17,6 +19,7 @@ function AuroraApp() {
       <main style={{ position: "relative" }}>
         {PAGE_MAP[currentPage] ?? <LandingPage />}
       </main>
+      <SiteFooter />
     </>
   );
 }

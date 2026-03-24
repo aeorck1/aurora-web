@@ -133,11 +133,3 @@
   background: #fff1f2;
   border-top: 1px solid #fecdd3;
 }
-
-/*  Footer note ─ */
-.footerNote {
-  text-align: center;
-  font-size: 11px;
-  color: var(--text-muted);
-  padding: 10px 0 20px;
-}
