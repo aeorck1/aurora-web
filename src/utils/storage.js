@@ -30,7 +30,7 @@ export const Storage = {
 
   set(userSession, value) {
     try {
-      localStorage.setItem(k, JSON.stringify(value));
+      localStorage.setItem(userSession, JSON.stringify(value));
       return true;
     } catch {
       return false;
