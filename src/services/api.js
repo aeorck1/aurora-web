@@ -1,5 +1,5 @@
 
-// Aurora API Service Layer
+// Aura API Service Layer
 // src/services/api.js
 
 // All backend communication goes through this
@@ -58,7 +58,7 @@ export async function getChatHistory(userId) {
 }
 
 /**
- * Send a message and get Aurora's response.
+ * Send a message and get Aura's response.
  * @param {string} userId
  * @param {string} sessionId
  * @param {string} message
@@ -76,7 +76,7 @@ export async function sendMessage(userId, sessionId, message) {
 }
 
 /**
- * Send an audio blob and get Aurora's response (fallback when SpeechRecognition is unavailable).
+ * Send an audio blob and get Aura's response (fallback when SpeechRecognition is unavailable).
  * @param {string} userId
  * @param {string} sessionId
  * @param {Blob}   audioBlob

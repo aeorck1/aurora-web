@@ -1,12 +1,12 @@
-# Aurora 🌸
+# Aura 🌸
 
-# Link to the live site [https://aurora-web-livid.vercel.app]
+# Link to the live site [https://Aura-web-livid.vercel.app]
 # Link to the backend repository [https://github.com/aeorck1/AIurora-backend]
 
 
 > *A calmer mind begins here.*
 
-Aurora is a private, AI-powered mental wellness companion. It gives users a safe, judgment-free space to talk through their feelings, reflect on their day, and track their emotional wellbeing — all from the browser.
+Aura is a private, AI-powered mental wellness companion. It gives users a safe, judgment-free space to talk through their feelings, reflect on their day, and track their emotional wellbeing — all from the browser.
 
 Built for the **#RaenestHackathon** by **Godwin Daniel** for **RaenestXDevCareers**.
 
@@ -21,7 +21,7 @@ Built for the **#RaenestHackathon** by **Godwin Daniel** for **RaenestXDevCareer
 | **Audio Upload** | Raw audio is sent directly to the backend via `POST /api/chat/audio` for server-side processing |
 | **Private Journal** | Personal journal stored exclusively in `localStorage` — entries never leave the device |
 | **Mood Tracking** | Tag each journal entry with a mood to observe emotional patterns over time |
-| **Session Memory** | Aurora maintains context throughout a session for continuity |
+| **Session Memory** | Aura maintains context throughout a session for continuity |
 | **Light / Dark Theme** | One-click theme toggle, respects the user's preference |
 | **Data Ownership** | Export journal as `.txt` or permanently delete all data at any time |
 
@@ -45,7 +45,7 @@ src/
 ├── pages/          # Route-level pages (LandingPage, ChatPage, JournalPage)
 ├── layouts/        # Shared layout wrappers (NavBar, SiteFooter)
 ├── services/       # API layer — all backend calls live here (api.js)
-├── store/          # Global state via React Context (AuroraContext)
+├── store/          # Global state via React Context (AuraContext)
 ├── hooks/          # Custom hooks (useSpeechToText, useAudioRecorder)
 ├── utils/          # Helper functions (storage.js)
 ├── constants/      # Static values (moods list, config)
@@ -62,7 +62,7 @@ All backend calls are centralised in `src/services/api.js`.
 |---|---|---|
 | `POST` | `/api/users` | Create a new anonymous user session |
 | `GET` | `/api/chat/:user_id` | Load a user's full chat history |
-| `POST` | `/api/chat` | Send a text message and receive Aurora's response |
+| `POST` | `/api/chat` | Send a text message and receive Aura's response |
 | `POST` | `/api/chat/audio` | Upload a voice recording (`multipart/form-data`: `user_id`, `audio_file`) |
 
 **Backend:** `https://aiurora-backend-production.up.railway.app`

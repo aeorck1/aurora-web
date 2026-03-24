@@ -50,7 +50,7 @@ export function useSpeechToText() {
     };
 
     recognition.onerror = (event) => {
-      console.warn("[Aurora] SpeechRecognition error:", event.error);
+      console.warn("[Aura] SpeechRecognition error:", event.error);
       setIsListening(false);
     };
 

@@ -2,9 +2,9 @@
 // Storage Abstraction (Privacy Layer)
 // Wraps localStorage with JSON serialisation,
 // error swallowing, and scoped key names.
-// Only Aurora's own keys are cleared on reset.
+// Only Aura's own keys are cleared on reset.
 
-const PREFIX = "aurora_";
+const PREFIX = "Aura_";
 
 function key(name) {
   return `${PREFIX}${name}`;
@@ -41,7 +41,7 @@ export const Storage = {
     localStorage.removeItem(userSession);
   },
 
-  /** Clears only Aurora's own keys — leaves other site data untouched. */
+  /** Clears only Aura's own keys — leaves other site data untouched. */
   clear() {
     Object.values(StorageKeys).forEach((userSession) => localStorage.removeItem(userSession));
   },

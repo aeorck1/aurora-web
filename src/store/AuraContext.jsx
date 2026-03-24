@@ -1,5 +1,5 @@
 
-// Aurora Context (Global State)
+// Aura Context (Global State)
 
 
 import { createContext, useContext, useState, useEffect, useCallback } from "react";
@@ -7,12 +7,12 @@ import { Storage, StorageKeys } from "../utils/storage";
 import { createUser } from "../services/api";
 import { exportJournalToText } from "../utils/exportJournal";
 
-export const AuroraContext = createContext(null);
+export const AuraContext = createContext(null);
 
-/** Access global Aurora state from any component. */
-export const useAurora = () => useContext(AuroraContext);
+/** Access global Aura state from any component. */
+export const useAura = () => useContext(AuraContext);
 
-export function AuroraProvider({ children }) {
+export function AuraProvider({ children }) {
   const [theme, setTheme] = useState(() => Storage.get(StorageKeys.theme) || "light");
   const [userId, setUserId] = useState(() => Storage.get(StorageKeys.userId));
   const [sessionId, setSessionId] = useState(() => Storage.get(StorageKeys.sessionId));
@@ -99,7 +99,7 @@ export function AuroraProvider({ children }) {
   const exportJournal = () => exportJournalToText(journal);
 
   return (
-    <AuroraContext.Provider
+    <AuraContext.Provider
       value={{
         theme,
         toggleTheme,
@@ -118,6 +118,6 @@ export function AuroraProvider({ children }) {
       }}
     >
       {children}
-    </AuroraContext.Provider>
+    </AuraContext.Provider>
   );
 }

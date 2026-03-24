@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      // Enables clean "@/..." imports, e.g. import { useAurora } from "@/store/AuroraContext"
+      // Enables clean "@/..." imports, e.g. import { useAura } from "@/store/AuraContext"
       "@": path.resolve(__dirname, "./src"),
     },
   },

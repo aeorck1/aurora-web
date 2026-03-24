@@ -37,7 +37,7 @@ export function useAudioRecorder() {
       setIsRecording(true);
     } catch (err) {
       // Permission denied or hardware unavailable
-      console.warn("[Aurora] Microphone access denied:", err.message);
+      console.warn("[Aura] Microphone access denied:", err.message);
       throw err;
     }
   }, []);

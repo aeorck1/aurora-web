@@ -2,7 +2,7 @@
 // NavBar
 
 import styles from "../styles/components/nav-bar.module.css";
-import { useAurora } from "../store/AuroraContext";
+import { useAura } from "../store/AuraContext";
 
 const NAV_ITEMS = [
   { id: "landing", label: "Home", icon: "✦" },
@@ -11,7 +11,7 @@ const NAV_ITEMS = [
 ];
 
 export default function NavBar() {
-  const { theme, toggleTheme, currentPage, setCurrentPage, isOnboarded } = useAurora();
+  const { theme, toggleTheme, currentPage, setCurrentPage, isOnboarded } = useAura();
 
   const handleNavClick = (itemId) => {
     if (itemId === "chat" && !isOnboarded) {
@@ -26,7 +26,7 @@ export default function NavBar() {
       {/* Logo */}
       <button className={styles.logoBtn} onClick={() => setCurrentPage("landing")}>
         <div className={styles.logoOrb}>✦</div>
-        <span className={styles.logoText}>Aurora</span>
+        <span className={styles.logoText}>Aura</span>
       </button>
 
       {/* Nav links */}

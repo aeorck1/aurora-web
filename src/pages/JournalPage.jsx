@@ -2,7 +2,7 @@
 // Journal Page
 import { useState } from "react";
 import styles from "../styles/pages/journal.module.css";
-import { useAurora } from "../store/AuroraContext";
+import { useAura } from "../store/AuraContext";
 import { MOOD_LIST } from "../constants/moods";
 import BgBlobs from "../components/BgBlobs";
 import MoodTag from "../components/MoodTag";
@@ -12,7 +12,7 @@ export default function JournalPage() {
   const {
     journal, addJournalEntry, updateJournalEntry,
     deleteJournalEntry, clearAllData, exportJournal,
-  } = useAurora();
+  } = useAura();
 
   const [view, setView] = useState("list");
   const [editingEntry, setEditingEntry] = useState(null);
@@ -90,7 +90,7 @@ export default function JournalPage() {
             <h3 className={styles.settingsTitle}>Privacy &amp; Data</h3>
             <p className={styles.settingsDesc}>
               All journal entries are stored exclusively in your browser's local storage. They never leave your device.
-              You can export your journal as a text file or permanently delete all Aurora data.
+              You can export your journal as a text file or permanently delete all Aura data.
             </p>
             <div className={styles.settingsActions}>
               <button className={styles.settingsExportBtn} onClick={exportJournal}>Export journal (.txt)</button>

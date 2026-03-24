@@ -1,4 +1,4 @@
-import { AuroraProvider, useAurora } from "./store/AuroraContext";
+import { AuraProvider, useAura } from "./store/AuraContext";
 import NavBar from "./layouts/NavBar";
 import SiteFooter from "./layouts/SiteFooter";
 import { LandingPage, ChatPage, JournalPage } from "./pages";
@@ -11,8 +11,8 @@ const PAGE_MAP = {
   journal: <JournalPage />,
 };
 
-function AuroraApp() {
-  const { currentPage } = useAurora();
+function AuraApp() {
+  const { currentPage } = useAura();
   return (
     <>
       <NavBar />
@@ -25,10 +25,10 @@ function AuroraApp() {
 }
 
 //  Root 
-export default function Aurora() {
+export default function Aura() {
   return (
-    <AuroraProvider>
-      <AuroraApp />
-    </AuroraProvider>
+    <AuraProvider>
+      <AuraApp />
+    </AuraProvider>
   );
 }

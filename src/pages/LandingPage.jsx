@@ -2,18 +2,18 @@
 // Landing Page
 
 import styles from "../styles/pages/landing.module.css";
-import { useAurora } from "../store/AuroraContext";
+import { useAura } from "../store/AuraContext";
 import BgBlobs from "../components/BgBlobs";
 
 const FEATURES = [
-  { icon: "◎", title: "AI Therapy Chat", color: "#7c3aed", desc: "Share what's on your mind. Aurora listens without judgment, offering thoughtful responses to help you process your feelings." },
+  { icon: "◎", title: "AI Therapy Chat", color: "#7c3aed", desc: "Share what's on your mind. Aura listens without judgment, offering thoughtful responses to help you process your feelings." },
   { icon: "◈", title: "Private Journaling", color: "#3b82f6", desc: "Write freely in your personal journal. All entries live only on your device — completely private, forever yours." },
   { icon: "◌", title: "Mood Tracking", color: "#10b981", desc: "Tag your emotional state with each entry to observe patterns and better understand your inner landscape over time." },
-  { icon: "✦", title: "Session Memory", color: "#f59e0b", desc: "Aurora remembers your conversations within a session, providing continuity and context as you explore your thoughts." },
+  { icon: "✦", title: "Session Memory", color: "#f59e0b", desc: "Aura remembers your conversations within a session, providing continuity and context as you explore your thoughts." },
 ];
 
 export default function LandingPage() {
-  const { setCurrentPage, isOnboarded, initUser } = useAurora();
+  const { setCurrentPage, isOnboarded, initUser } = useAura();
 
   const handleGetStarted = async () => {
     await initUser();
@@ -38,7 +38,7 @@ export default function LandingPage() {
           </h1>
 
           <p className={styles.subtext}>
-            Aurora is a private, AI-powered space for therapy conversations and personal journaling.
+            Aura is a private, AI-powered space for therapy conversations and personal journaling.
             Your thoughts stay on your device, and you stay in control.
           </p>
 

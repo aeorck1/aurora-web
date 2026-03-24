@@ -6,7 +6,7 @@ import styles from "../styles/components/chat-bubble.module.css";
 export default function ChatBubble({ message, isUser, isTyping }) {
   return (
     <div className={styles.wrapper} data-user={String(isUser)}>
-      {/* Aurora avatar — AI messages only */}
+      {/* Aura avatar — AI messages only */}
       {!isUser && <div className={styles.avatar}>✦</div>}
 
       <div className={styles.bubble} data-user={String(isUser)}>

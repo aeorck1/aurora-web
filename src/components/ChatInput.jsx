@@ -97,32 +97,6 @@ export default function ChatInput({
       />
 
 
-      <button
-        className={styles.micBtn}
-        onClick={handleMicToggle}
-        disabled={disabled || micBlocked}
-        data-recording={String(isActive)}
-        title={
-          micBlocked ? "Microphone access denied" :
-            !speechSupported ? "Record audio" :
-              isActive ? "Stop recording" :
-                "Voice input"
-        }
-        aria-label={isActive ? "Stop recording" : "Start voice input"}
-      >
-        {isActive ? (
-          /* Animated waveform when recording */
-          <span className={styles.waveform} aria-hidden="true">
-            <span className={styles.bar} />
-            <span className={styles.bar} />
-            <span className={styles.bar} />
-            <span className={styles.bar} />
-            <span className={styles.bar} />
-          </span>
-        ) : (
-          "🎤"
-        )}
-      </button>
 
 
       <button

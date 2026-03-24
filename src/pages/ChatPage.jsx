@@ -2,7 +2,7 @@
 // Chat Page
 import { useState, useEffect, useRef, useCallback } from "react";
 import styles from "../styles/pages/chat.module.css";
-import { useAurora } from "../store/AuroraContext";
+import { useAura } from "../store/AuraContext";
 import { Storage, StorageKeys } from "../utils/storage";
 import { getChatHistory, sendMessage, sendAudioMessage } from "../services/api";
 import BgBlobs from "../components/BgBlobs";
@@ -13,7 +13,7 @@ const WELCOME_MESSAGE = {
   id: "welcome",
   role: "assistant",
   content:
-    "Hello, I'm Aurora 🌸\n\nThis is a safe, private space just for you. I'm here to listen — whether you want to talk through your feelings, work through something difficult, or simply reflect on your day.\n\nWhat's on your mind today?",
+    "Hello, I'm Aura 🌸\n\nThis is a safe, private space just for you. I'm here to listen — whether you want to talk through your feelings, work through something difficult, or simply reflect on your day.\n\nWhat's on your mind today?",
 };
 
 const CONVERSATION_STARTERS = [
@@ -24,7 +24,7 @@ const CONVERSATION_STARTERS = [
 ];
 
 export default function ChatPage() {
-  const { userId, sessionId, initUser } = useAurora();
+  const { userId, sessionId, initUser } = useAura();
 
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -65,7 +65,7 @@ export default function ChatPage() {
           setMessages([WELCOME_MESSAGE]);
         }
       } catch {
-        setMessages([{ ...WELCOME_MESSAGE, content: "Hello, I'm Aurora 🌸\n\nThis is a safe, private space just for you. What's on your mind today?" }]);
+        setMessages([{ ...WELCOME_MESSAGE, content: "Hello, I'm Aura 🌸\n\nThis is a safe, private space just for you. What's on your mind today?" }]);
       } finally {
         setIsLoadingHistory(false);
       }
@@ -129,7 +129,7 @@ export default function ChatPage() {
         <div className={styles.statusWrap}>
           <div className={styles.statusPill}>
             <div className={styles.statusDot} />
-            <span className={styles.statusText}>Aurora is here · Private session</span>
+            <span className={styles.statusText}>Aura is here · Private session</span>
           </div>
         </div>
 
